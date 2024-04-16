@@ -38,27 +38,16 @@ class MedienDetailAnzeigerWerkzeug
 //			if(m instanceof CD)
 //			{
 //				CD cd = (CD) m;
-//				text += cd.getMedienBezeichnung() + ": " + cd.getTitel() + "\n"
-//						+ "Interpret: " + cd.getInterpret() + "\n"
-//						+ "Spiellänge: " + cd.getSpiellaenge() + "\n"
-//						+ "Kommentar: " + cd.getKommentar() + "\n"
-//						+ "---------------\n";
+//				text += cd.getFormatiertenString();
 //
 //			} else if(m instanceof DVD)
 //			{
 //				DVD dvd = (DVD) m;
-//				text += dvd.getMedienBezeichnung() + ": " + dvd.getTitel()
-//						+ "\n" + "Regisseur: " + dvd.getRegisseur() + "\n"
-//						+ "Laufzeit: " + dvd.getLaufzeit() + "\n"
-//						+ "Kommentar: " + dvd.getKommentar() + "\n"
-//						+ "---------------\n";
+//				text += dvd.getFormatiertenString();
 //			} else if(m instanceof Videospiel)
 //			{
 //				Videospiel spiel = (Videospiel) m;
-//				text += spiel.getMedienBezeichnung() + ": " + spiel.getTitel()
-//						+ "\n" + "Lauffähig auf: " + spiel.getSystem() + "\n"
-//						+ "Kommentar: " + spiel.getKommentar() + "\n"
-//						+ "---------------\n";
+//				text += spiel.getFormatiertenString();
 //			}
 //		}
 //		selectedMedienTextArea.setText(text);
