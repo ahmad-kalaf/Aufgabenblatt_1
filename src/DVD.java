@@ -104,8 +104,8 @@ class DVD implements Medium
 	public String getFormatiertenString()
 	{
 		return getMedienBezeichnung() + ": " + getTitel()
-		+ "\n" + "Regisseur: " + getRegisseur() + "\n"
-		+ "Laufzeit: " + getLaufzeit() + "\n"
+		+ "\n" + "Laufzeit: " + getLaufzeit() + "\n"
+		+ "Regisseur: " + getRegisseur() + "\n"
 		+ "Kommentar: " + getKommentar();
 	}
 }
