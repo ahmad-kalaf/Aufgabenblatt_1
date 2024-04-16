@@ -103,10 +103,9 @@ class DVD implements Medium
 	@Override
 	public String getFormatiertenString()
 	{
-		String text = getMedienBezeichnung() + ": " + getTitel()
+		return getMedienBezeichnung() + ": " + getTitel()
 		+ "\n" + "Regisseur: " + getRegisseur() + "\n"
 		+ "Laufzeit: " + getLaufzeit() + "\n"
 		+ "Kommentar: " + getKommentar();
-		return text;
 	}
 }

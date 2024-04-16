@@ -44,6 +44,7 @@ public class StartUpMediathek_Blatt01 extends Application
 					datenEinleser.getMedien());
 			_kundenstamm = new KundenstammServiceImpl(
 					datenEinleser.getKunden());
+			//_verleihService = new DummyVerleihService(_kundenstamm,_medienbestand, datenEinleser.getVerleihkarten());
 			_verleihService = new VerleihServiceImpl(_kundenstamm,
 					_medienbestand, datenEinleser.getVerleihkarten());
 		} catch(DateiLeseException e)

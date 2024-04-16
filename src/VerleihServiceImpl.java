@@ -141,8 +141,8 @@ class VerleihServiceImpl extends AbstractObservableService
 		for(Medium medium : medien)
 		{
 			Verleihkarte karte = new Verleihkarte(kunde, medium, ausleihDatum);
-			// das Fehlen dieser Zeile war der Fehler, der das Ausleihen
-			// verhinderte:
+			// das Fehlen dieser Zeile war der Fehler, der das Ausleihen verhinderte 
+			// (neue Verleihkarte wurde nicht zu Map _verleihkarte hinzugefuegt)
 			_verleihkarten.put(medium, karte);
 		}
 		informiereUeberAenderung();

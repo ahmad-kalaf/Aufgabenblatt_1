@@ -103,11 +103,10 @@ class CD implements Medium
 	@Override
 	public String getFormatiertenString()
 	{
-		String text = getMedienBezeichnung() + ": " + getTitel() + "\n"
+		return getMedienBezeichnung() + ": " + getTitel() + "\n"
 				+ "Interpret: " + getInterpret() + "\n"
 				+ "Spiellänge: " + getSpiellaenge() + "\n"
 				+ "Kommentar: " + getKommentar();
-		return text;
 	}
 
 }
