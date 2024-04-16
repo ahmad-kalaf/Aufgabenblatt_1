@@ -165,5 +165,14 @@ class Kunde
     {
         _wohnort = wohnort;
     }
+    
+    @Override
+    public String toString() 
+    {
+    	return "Kundennummer: " + getKundennummer() + "\n"
+    			+ "Nachname, Vorname:" + getNachname() + ", " + getVorname() + "\n"
+    			+ "Adresse: " + getStrasse() + ", " + getPLZ() + ", " + getWohnort() + "\n"
+    			+ "Telefonnummer: " + getTelefonnummer() + "\n";
+    }
 
 }
