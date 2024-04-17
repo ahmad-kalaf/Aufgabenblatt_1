@@ -28,26 +28,6 @@ class MedienDetailAnzeigerWerkzeug
 	 * 
 	 * @require (medien != null)
 	 */
-	public void setMedien(List<Medium> medien)
-	{
-		assert medien != null : "Vorbedingung verletzt: (medien != null)";
-		TextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
-		String text = "";
-		for(Medium m : medien)
-		{
-			if(m instanceof CD cd)
-			{
-				text += cd.getFormatiertenString();
-			} else if(m instanceof DVD dvd)
-			{
-				text += dvd.getFormatiertenString();
-			} else if(m instanceof Videospiel spiel)
-			{
-				text += spiel.getFormatiertenString();
-			}
-		}
-		selectedMedienTextArea.setText(text);
-	}
 //	public void setMedien(List<Medium> medien)
 //	{
 //		assert medien != null : "Vorbedingung verletzt: (medien != null)";
@@ -55,14 +35,34 @@ class MedienDetailAnzeigerWerkzeug
 //		String text = "";
 //		for(Medium m : medien)
 //		{
-//			// Wir benötigen hier kein Typtest mehr, da wir ein dynamisch
-//			// gebundenes Methodenaufruf verwenden. Zur Laufzeit wird je nach
-//			// dynamische Typ von m die jeweiligie spezifische Methode einer
-//			// implemendierenden Klasse von Medium aufgerufen.
-//			text += m.getFormatiertenString() + "\n" + "---------------\n";
+//			if(m instanceof CD cd)
+//			{
+//				text += cd.getFormatiertenString();
+//			} else if(m instanceof DVD dvd)
+//			{
+//				text += dvd.getFormatiertenString();
+//			} else if(m instanceof Videospiel spiel)
+//			{
+//				text += spiel.getFormatiertenString();
+//			}
 //		}
 //		selectedMedienTextArea.setText(text);
 //	}
+	public void setMedien(List<Medium> medien)
+	{
+		assert medien != null : "Vorbedingung verletzt: (medien != null)";
+		TextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
+		String text = "";
+		for(Medium m : medien)
+		{
+			// Wir benötigen hier kein Typtest mehr, da wir ein dynamisch
+			// gebundenes Methodenaufruf verwenden. Zur Laufzeit wird je nach
+			// dynamische Typ von m die jeweiligie spezifische Methode einer
+			// implemendierenden Klasse von Medium aufgerufen.
+			text += m.getFormatiertenString() + "\n" + "---------------\n";
+		}
+		selectedMedienTextArea.setText(text);
+	}
 
 	/**
 	 * Gibt das Panel dieses Subwerkzeugs zurück.
